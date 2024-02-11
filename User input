@@ -1,0 +1,34 @@
+
+//Make sure to input this. without it, we won't be able to use scanner.w
+import 	java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String [] args) {
+		
+		//user input
+		//Scanner, then name for scanner, then new scanner
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("What is your name? ");
+		String name = scanner.nextLine();
+		
+		System.out.println("Hi, " + name + ", my name is is also " + name + ".");
+		
+		//For numbers
+		System.out.println("What is your age? ");
+		int age = scanner.nextInt();
+		System.out.println("That's cool. You are " + age + " years old!");
+		
+		//In order for this to work after int age
+		//Clear the "scanner catalog"
+		scanner.nextLine();
+		
+		
+		System.out.println("What is your favorite book? ");
+		String bookQuestion = scanner.nextLine();
+		System.out.println("I like " + bookQuestion + " too!");
+	}
+	
+}
