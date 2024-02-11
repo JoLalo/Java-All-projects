@@ -1,0 +1,32 @@
+
+public class Main {
+
+	public static void main(String [] args) {
+		String x = "Orange juice";
+		String y = "Water";
+	
+		System.out.println("x: "+x);	
+		System.out.println("y: "+y);	
+
+		
+		//Variable to temporarily hold
+		String temp;
+		
+		//Temp is now equal to orange juice
+		temp = x;
+		System.out.println(temp);
+		
+		//x is now equal to water("Water");
+		x = y;
+		
+		//Y is now equal to temp ("Orange juice");
+		y = temp;
+	
+		
+		//The items were swapped.
+		System.out.println("x2: "+x);	
+		System.out.println("x2: "+y);
+		
+	}
+	
+}
