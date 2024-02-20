@@ -1,0 +1,61 @@
+import javax.swing.JOptionPane;
+
+public class JavaCoding {
+
+	public static void main(String[] args) {
+		/*
+		 * Bro code episode 6 String name =
+		 * JOptionPane.showInputDialog("Enter your name: ");
+		 * JOptionPane.showMessageDialog(null, "Hello " + name); int age =
+		 * Integer.parseInt(JOptionPane.showInputDialog("Enter your age: "));
+		 * JOptionPane.showMessageDialog(null, "You are " + age + " years old");
+		 * 
+		 * double newValue =
+		 * Double.parseDouble(JOptionPane.showInputDialog("Enter a decimal"));
+		 * JOptionPane.showMessageDialog(null, newValue);
+		 * 
+		 */
+		// Goal - make a simple battle simulator
+
+		int playerHealth = 280;
+		int bossHealth = 200;
+
+		int playerAttack = 20;
+		int bossAttack = 20;
+
+		String playerAttackChoice;
+
+		double missAttack = Math.floor(Math.random() * 11);
+
+		for (int i = 0; playerHealth > 0 && bossHealth > 0; i++) {
+
+			// Player turn
+			if (i % 2 == 0) {
+
+				playerAttackChoice = JOptionPane.showInputDialog("Time for you to attack (press enter)");
+				// Chance of playing missing
+				missAttack = Math.floor(Math.random() * 11);
+				// If player gets to attack
+				if (missAttack > 3.0) {
+					bossHealth = bossHealth - playerAttack;
+					JOptionPane.showMessageDialog(null, "Nice! Monster's health is now: " + bossHealth);
+					// If players doesn't get to attack
+				} else if (missAttack <= 4.0) {
+					JOptionPane.showMessageDialog(null, "You missed! Get your head in the game");
+				}
+				// Monster turn
+			} else {
+				playerHealth = playerHealth - bossAttack;
+				JOptionPane.showMessageDialog(null, "Monster attacks! Your health is now: " + playerHealth);
+			}
+
+		}
+		if (bossHealth == 0) {
+			JOptionPane.showMessageDialog(null, "You've defeated the monster! Good job hero.");
+		} else if (playerHealth == 0) {
+			JOptionPane.showMessageDialog(null, "You have been defeated! (But you can always respawn :) )");
+		}
+
+	}
+
+}
