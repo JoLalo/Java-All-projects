@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+public class JavaCoding {
+
+	public static void main(String[] args) {
+		//Bro Code episode 7
+		/*
+		 * 
+		 * // Maximum double x = 3.14; double y = -10;
+		 * 
+		 * double z = Math.max(x, y);
+		 * 
+		 * System.out.println(z);
+		 * 
+		 * // Minimum z = Math.min(x, y); System.out.println(z);
+		 * 
+		 * // Absolute value System.out.println(Math.abs(y));
+		 * 
+		 * // Square root z = Math.sqrt(Math.abs(y)); System.out.println(z);
+		 * 
+		 * // Round z = Math.round(x); System.out.println(z);
+		 * 
+		 * // Ceiling - rounds up z = Math.ceil(x); System.out.println(z);
+		 * 
+		 * // Floor - rounds down z = Math.floor(x); System.out.println(Math.floor(x));
+		 */
+
+		
+		Scanner scnr = new Scanner(System.in);
+
+		// Find the hypotenuse
+
+		// Side x
+		System.out.println("Enter side x: ");
+		double x = scnr.nextDouble();
+
+		// Side y
+		System.out.println("Enter side y: ");
+		double y = scnr.nextDouble();
+
+		// Side z
+		double z;
+		double temp;
+
+		// Doing the formula
+		x = (x * x);
+		y = (y * y);
+
+		// Storying x+y into temp
+		temp = x + y;
+
+		// Square rooting temp and assigning it to z
+		z = Math.sqrt(temp);
+
+		// Printing out the result
+		System.out.println("The hypotenuse of the triangle is: " + z);
+
+		scnr.close();
+
+		// Good job Joe.
+	}
+
+}
